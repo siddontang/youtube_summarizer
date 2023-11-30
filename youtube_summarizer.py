@@ -46,7 +46,7 @@ def summarize_transcript(transcript):
     )
 
     completion = client.chat.completions.create(
-        model=os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo'),
+        model=os.getenv('OPENAI_MODEL', 'gpt-3.5-turbo-16k'),
         messages=[
             {"role": "system", "content": prompt_text},
             {"role": "user", "content": "Summarize the following text:\n\n" + transcript}
